@@ -1,0 +1,329 @@
+#player {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.bulletDef {
+  position: absolute;
+  display: inline-block;
+  background-color: #25ffff;
+  width: 16px;
+  height: 2px;
+  border:1px solid rgba(20,20,20,0.1);
+  /*box-shadow: 0px 0px 16px #25ffff;*/
+}
+
+.bulletShotgun {
+  position: absolute;
+  display: inline-block;
+  background-color: red;
+  width: 8px;
+  height: 1px;
+  border:1px solid rgba(20,20,20,0.2);
+  /*box-shadow: 0px 0px 16px red;*/
+}
+
+.bulletMachinegun {
+  position: absolute;
+  display: inline-block;
+  background-color: yellow;
+  width: 24px;
+  height: 1px;
+  border:1px solid rgba(20,20,20,0.2);
+  /*box-shadow: 0px 0px 16px yellow;*/
+}
+
+.bulletLaser {
+  position: absolute;
+  display: inline-block;
+  background-color: #ff25d8;
+  width: 300px;
+  height: 3px;
+  border:1px solid rgba(20,20,20,0.2);
+  /*box-shadow: 0px 0px 16px #ff25d8;*/
+   
+}
+
+.bulletPulsegun {
+  position: absolute;
+  display: inline-block;
+  background-color: #4eff25;
+  width: 3px;
+  height: 9px;
+  border:1px solid rgba(20,20,20,0.2);
+  /*box-shadow: 0px 0px 16px #4eff25;*/
+}
+
+.bulletRailgun {
+  position: absolute;
+  display: inline-block;
+  background-color: #0155ff;
+  width: 120px;
+  height: 2px;
+  border:1px solid rgba(20,20,20,0.2);
+  /*box-shadow: 0px 0px 16px #0155ff;*/
+}
+
+.bulletTrackinggun {
+  position: absolute;
+  display: inline-block;
+  background-color: #ff7c25;
+  width: 3px;
+  height: 3px;
+  border:1px solid rgba(20,20,20,0.2);
+  /*box-shadow: 0px 0px 16px #ff7c25;*/
+}
+
+#screenContainer {
+  background-color:white;
+  width: 800px;
+  height: 600px;
+  border: solid gray 1px;
+  overflow: hidden;
+  background-color: black;
+  position: relative;
+  border-top: none;
+  background-position: 0px 0px;
+  z-index: -2;
+}
+
+#screenContainerOverlay {
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0.3;
+}
+
+#screenContainerOverlay2 {
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0.1;
+}
+
+#screenContainerOverlayNebula {
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0.9;
+}
+
+#screenContainerOverlayNebula2 {
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0.4;
+}
+
+.powerUp {
+	position: absolute;
+	left: 830;
+	top: 300;
+	display: none;
+	width: 30px;
+	height: 30px;
+	opacity: 0.9;
+}
+
+.invisible {
+	background-color: rgba(0,0,0,0);
+}
+
+#shieldActual {
+	background-color: #25ffff;
+}
+
+#healthActual {
+	background-color: #4eff25;	
+}
+
+#shieldContainer {
+	top: 48px;
+}
+
+#healthContainer {
+	top: 64px;
+}
+
+.statusContainer {
+	height: 14px;
+	width: 100%;
+	background-color: red;
+	position: absolute;
+}
+
+.statusActual {
+	position: absolute;
+	height: 14px;
+	width: 100%;
+	font-size: 14px;
+	color: black;
+	font-weight: bold;
+}
+
+#menuBar {
+	width: 800px;
+	height: 80px;
+	border: solid gray 1px;
+	border-bottom: none;
+	position: relative;
+	background-color: black;
+}
+
+#powerUpBar {
+	position: absolute;
+	left: 3px;
+	top: 6px;
+	width: 540px;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+#scoreContainer{
+	position: absolute;
+	left: 530px;
+	font-size: 30px;
+	top: 10px;
+	text-shadow: 2px 2px 3px #25ffff;
+}
+
+body {
+	color: white;
+	font-family: "Lucida Console";
+}
+
+#selected {
+	border: 2px solid #fffc25;
+	width: 70px;
+	float:left;
+}
+
+.statusselect {
+	border: 1px solid gray;
+	width: 70px;
+	float:left;
+	position: relative;
+	height: 34px;
+}
+
+.powerupmenuimg {
+	position: absolute;
+	left: 1px;
+	top: 2px;
+	box-shadow: 0px 0px 6px #25ffff;
+}
+
+.ammo {
+	position: absolute;
+	top: 15px;
+	left: 35px;
+	text-shadow: 2px 2px 3px #25ffff;
+	
+}
+
+#startbutton {
+	width: 800px;
+	height: 600px;
+	background-color: black;
+	position: absolute;
+	border: 2px solid #25ffff;
+	left: 0px;
+	font-size: 60px;
+	color: white;
+	text-shadow: 0 0 30px #25ffff;
+	z-index: 2;
+}
+
+#wrapper {
+	width: 800px;
+	position: relative;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.enemy {
+	position: absolute;
+	opacity: 0.9;
+}
+
+#healthNumDiv, #shieldNumDiv {
+	position: absolute;
+	width: 100%;
+	color: black;
+}
+
+.explosion {
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0.3;
+	top: 0px;
+}
+
+#levelBar, #highScoreBar {
+	width: 800px;
+	border: 1px solid gray;
+	position: relative;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	text-shadow: 2px 1px 3px #25ffff;
+	font-size: 20px;
+}
+
+#gameover {
+	width: 800px;
+	height: 600px;
+	background-color: black;
+	position: absolute;
+	border: 2px solid #25ffff;
+	left: 0px;
+	font-size: 60px;
+	color: white;
+	text-shadow: 0 0 30px #25ffff;
+	z-index: 2;
+	display: none;
+}
+
+#instructions {
+	width: 796px;
+	height: 596px;
+	background-color: black;
+	position: absolute;
+	border: 2px solid #25ffff;
+	left: 0px;
+	z-index: 2;
+	display: none;
+}
+#creditbutton {
+	background-color: black;
+	border: 2px none #25ffff;
+	font-size: 30px;
+	color: white;
+	text-shadow: 0 0 30px #25ffff;
+	padding: 3px;
+}
+
+#credit {
+	background-color: black;
+	left: 0px;
+	padding: 5px;
+	display: none;
+}
+
+#startbutton:hover, #instructions:hover, #gameover:hover{
+	background-color: rgba(30,30,30,1);
+	box-shadow: inset 0 0 200px black;
+}
+
+#creditbutton:hover{
+	background-color: rgba(30,30,30,1);
+	box-shadow: inset 0 0 10px black;
+}

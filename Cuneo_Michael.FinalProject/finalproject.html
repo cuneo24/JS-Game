@@ -1,0 +1,90 @@
+<html>
+
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/finalproject.js"></script>
+    <link rel="stylesheet" href="css/finalproject.css">
+  </head>
+
+  <body style="background-color:black;">
+    <!--<center>-->
+      <div id="wrapper">
+        <div id="menuBar">
+          <div id="powerUpBar">
+            <div class="statusselect" id="selected"><img class="powerupmenuimg" src="images/defaultpowerup.png" style="width:30px; height:30px;"><span class="ammo" style="font-size: 25px; position: absolute; top: 8px;">&infin;</span></div>
+            <div class="statusselect"><img class="powerupmenuimg" src="images/shotgunpowerup.png" style="width:30px; height:30px;"><span class="ammo">0</span></div>
+            <div class="statusselect"><img class="powerupmenuimg" src="images/machinegunpowerup.png" style="width:30px; height:30px;"><span class="ammo">0</span></div>
+            <div class="statusselect"><img class="powerupmenuimg" src="images/laserpowerup.png" style="width:30px; height:30px;"><span class="ammo">0</span></div>
+            <div class="statusselect"><img class="powerupmenuimg" src="images/pulsegunpowerup.png" style="width:30px; height:30px;"><span class="ammo">0</span></div>
+            <div class="statusselect"><img class="powerupmenuimg" src="images/railgunpowerup.png" style="width:30px; height:30px;"><span class="ammo">0</span></div>
+            <div class="statusselect"><img class="powerupmenuimg" src="images/trackinggunpowerup.png" style="width:30px; height:30px;"><span class="ammo">0</span></div>
+          </div>
+          <div id="scoreContainer">SCORE: <span id="score">0</span></div>
+          <div id="shieldContainer" class="statusContainer">
+            <div id="shieldActual" class="statusActual"></div>
+            <div id="shieldNumDiv">SHIELD <span id="shieldNumber">100</span> / 100</div>
+          </div>
+
+          <div id="healthContainer" class="statusContainer">
+            <div id="healthActual" class="statusActual"></div>
+            <div id="healthNumDiv">HULL <span id="healthNumber">100</span> / 100</div>
+          </div>
+
+        </div>
+
+        <button id="startbutton">S P A C E &nbsp;E S C A P E</button>
+        <div id="instructions">
+          <h1>Welcome to Space Escape!</h1>
+          The objective of this game is to survive as long as you can while getting the highest score you can. If you get hit by an enemy ship, your run is over.<br> You can gain points by shooting at and destroying oncoming enemy ships, and also just
+          surviving.
+          <br><br> There are 10 levels in this game, starting at level 1. The levels will increase over time, and as they do, so do the enemy ships' speed and health. Destroying enemy ships and surviving, however, will also give you more points.<br><br>
+		  To help you out, powerups will appear on screen periodically. When you pick one up, your firing mode is changed to that of that powerup, and you can view ammo remaining for that firing mode at the top of the screen.<br><br><u>CONTROLS</u><br>
+          <br> Use the arrow keys to move, spacebar to shoot, and the left ctrl key to toggle between firing modes when available (selected mode marked in yellow).<br><br><u>POWERUPS / FIRING MODES</u>
+          <br><br>
+          <div style="display: inline-block; padding: 3px;"><img src="images/shotgunpowerup.png"><br>Shotgun</div>
+          <div style="display: inline-block; padding: 3px;"><img src="images/machinegunpowerup.png"><br>Machine Gun</div>
+          <div style="display: inline-block; padding: 3px;"><img src="images/laserpowerup.png"><br>Laser Gun</div>
+          <div style="display: inline-block; padding: 3px;"><img src="images/pulsegunpowerup.png"><br>Pulse Gun</div>
+          <div style="display: inline-block; padding: 3px;"><img src="images/railgunpowerup.png"><br>Railgun</div>
+          <div style="display: inline-block; padding: 3px;"><img src="images/trackinggunpowerup.png"><br>Tracking Gun</div><br><br> ** It is recommended that you adjust browser zoom for the best experience **<br><br><br>
+          <span id="beginclick" style="text-shadow: 0 0 30px #25ffff; font-size: 30px;">Click this screen to begin!</span>
+        </div>
+        <button id="gameover">G A M E &nbsp;O V E R<br><br>
+		<span style="font-size: 20px;">Click here to play again</span>
+		</button>
+
+        <div id="screenContainer" style="background-image: url('images/background2.png');">
+          <div id="screenContainerOverlay" style="background-image: url('images/foreground1.png');"></div>
+          <div id="screenContainerOverlayNebula" style="background-image: url('images/nebula1.png');"></div>
+          <div id="screenContainerOverlay2" style="background-image: url('images/foreground2.png');"></div>
+          <div id="screenContainerOverlayNebula2" style="background-image: url('images/nebula2.png');"></div>
+          <img src="images/playershipdef.png" id="player" style="width:50px; height:30px;"><br><br>
+
+        </div>
+        <div id="levelBar">Level: <span id="lvlnum">1</span></div>
+        <div id="highScoreBar">High Score: <span id="highscorenum">0</span></div>
+        <br>
+        <button id="creditbutton">C R E D I T S</button><br>
+        <div id="credit">
+          <u>Movement Script</u><br><a href="https://stackoverflow.com/questions/12273451/how-to-fix-delay-in-javascript-keydown">Stack Overflow User "nnnnnn"</a><br><br>
+          <u>Background Music</u><br>Liquid Vortex by Vandeta<br><br>
+          <u>Sound Effects, Sprites and Artwork, Code Development</u><br> Michael Cuneo<br><br>
+		  
+		  <span style="font-family: Arial;">Five requirements have been used in this program:<br><br>
+		  1. <u>DOM element creation, deletion or modification</u> - bullets, enemies, and the player are the types of elements that are created, modified, and removed throughout the program.<br><br>
+		  2. <u>DOM traversal</u> - though I am not sure if it counts, document.getElementsByClass() is a commonly used method to go through and retrieve the DOM elements I need to work with, examples being use in the tracking gun's ability to dynamically find targets and menu status selection with the yellow highlight.<br><br>
+		  3. <u>Capturing and handling events</u> - this should go without saying. From ship movement to toggling firing modes to shooting bullets, this game sure uses event handling.<br><br>
+		  4. <u>Creating and handling a data structure (JSON, custom objects, etc)</u> - the data for each enemy in this game is created using a custom "Enemy" constructor object. JSON is also used to write to and retain a high score in local storage.<br><br>
+		  5. <u>Closures</u> - while slightly dissimilar from what we learned from the lesson, scope is handled through the use of the method setTimeout. As an example, the function playerShootController is a function that has a few nested functions to create and add behavior to new bullet elements.
+		  The runtime on this playerShootController function is very short, however the scope needs to be retained for animation to work. The bulletTracker function uses setTimeout to keep it running as long as needed independent of the scope it was created in while using the variables passed
+		  by the outer function scope it was created in to keep the bullet animation working. This function will run until certain conditions are met, such as hitting an enemy or reaching the end of the screen, where the element the function is working on gets removed from the parent.<br><br>
+		  Function was favored over optimization. The amount of recursion causes some noticable lag.
+	    </span>		  
+        </div>
+
+
+      </div>
+    <!--</center>-->
+  </body>
+
+</html>
